@@ -6,7 +6,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="flex flex-col items-center justify-center">
       
-        <button className=''>
+        <button className='bg-blue-500 text-white font-bold py-2 px-4 rounded'>
           + List your space
         </button>
         </div>
