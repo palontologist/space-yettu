@@ -1,5 +1,6 @@
 "use client";
 
+import { UserButton } from "@clerk/nextjs";
 import { useState } from 'react';
 
 interface Space {
@@ -11,6 +12,7 @@ interface Space {
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
   const [spaces, setSpaces] = useState<Space[]>([]);
+
 
   const handleListSpaceClick = () => {
     setShowForm(true);
@@ -29,7 +31,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-between mb-8 w-full">
         {showForm ? (
           <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
@@ -44,6 +46,7 @@ export default function Home() {
           <button className='bg-blue-500 text-white font-bold py-2 px-4 rounded' onClick={handleListSpaceClick}>
             + List your space
           </button>
+          
         )}
         {spaces.map((space, index) => (
           <div key={index}>
@@ -53,6 +56,7 @@ export default function Home() {
           </div>
         ))}
       </div>
+      <UserButton afterSignOutUrl="/"/>
     </main>
   );
 }
