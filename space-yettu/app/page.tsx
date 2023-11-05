@@ -71,39 +71,41 @@ export default function Home() {
           <button className='bg-green-500 text-white font-bold py-2 px-4 rounded' onClick={handleBookSpaceClick}>
             Book your space
           </button>
-          <button className='bg-white-500 text-white font-bold py-2 px-4 rounded' onClick={handleClearSpaces}>
+          <button className='bg-red-500 text-white font-bold py-2 px-4 rounded' onClick={handleClearSpaces}>
             Clear spaces
           </button>
           <UserButton afterSignOutUrl="/"/>
         </div>
       </div>
 
-      <header className="container mx-auto text-center mt-10">
-        <p className="max-w-4xl text-2xl md:text-3xl lg:text-4xl text-gray-700 mt-2 mx-auto">Connecting <span className='text-blue-600'>creatives</span> with spaces to work and create</p>
+      <header className="container mx-auto text-center mt-10 bg-cover bg-center" style={{backgroundImage: "url('/fotor-ai.jpg')"}}>
+        <div className="bg-gray-800 bg-opacity-50 text-white p-10 rounded">
+          <p className="max-w-4xl text-2xl md:text-3xl lg:text-4xl text-gray-700 mt-2 mx-auto">Connecting <span className='text-blue-600'>creatives</span> with affordable and inspirational spaces to work and create</p>
+        </div>
       </header>
 
       {showForm && (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-10">
-          <label htmlFor="name" className="font-bold">Name:</label>
-          <input type="text" id="name" name="name" className="text-black border-2 border-gray-300 p-2 rounded-md" />
-          
-          <label htmlFor="description" className="font-bold">Description:</label>
-          <input type="text" id="description" name="description" className="border-2 border-gray-300 text-black p-2 rounded-md" />
-          
-          <input type="file" id="image" name="image" className="border-2 border-gray-300 p-2 rounded-md" />
-          <label htmlFor='image' className="font-bold">Upload Image</label>
-          
-          <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Submit</button>
-        </form>
+        <label htmlFor="name" className="font-bold">Name:</label>
+        <input type="text" id="name" name="name" className="border-2 border-gray-300 p-2 rounded-md" />
+        
+        <label htmlFor="description" className="font-bold">Description:</label>
+        <input type="text" id="description" name="description" className="border-2 border-gray-300 p-2 rounded-md" />
+        
+        <input type="file" id="image" name="image" className="border-2 border-gray-300 p-2 rounded-md" />
+        <label htmlFor='image' className="font-bold">Upload Image</label>
+        
+        <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Submit</button>
+      </form>
       )}
 
       {showBetaForm && (
         <form onSubmit={handleBetaFormSubmit} className="flex flex-col space-y-4 mt-10">
-          <label htmlFor="email" className="font-bold">Email:</label>
-          <input type="email" id="email" name="email" className="border-2 border-gray-300 p-2 rounded-md" required />
-          
-          <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Submit</button>
-        </form>
+        <label htmlFor="email" className="font-bold">Email:</label>
+        <input type="email" id="email" name="email" className="border-2 border-gray-300 p-2 rounded-md" required />
+        
+        <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Submit</button>
+      </form>
       )}
 
       <div className="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
