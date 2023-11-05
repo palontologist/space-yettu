@@ -81,7 +81,7 @@ export default function Home() {
       <header className="flex mt-10">
         <div className="w-1/2 bg-cover bg-center" style={{backgroundImage: "url('/fotor-ai.jpg')"}}></div>
         <div className="w-1/2 bg-gray-800 text-white p-10">
-          <p className="max-w-4xl text-2xl md:text-3xl lg:text-4xl text-gray-700 mt-2 mx-auto">Connecting <span className='text-blue-600'>creatives</span> with affordable and inspirational spaces to work and create</p>
+          <p className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Connecting <span className='text-blue-600'>creatives</span> with spaces to work and create</p>
         </div>
       </header>
 
