@@ -85,10 +85,10 @@ export default function Home() {
       {showForm && (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-10">
           <label htmlFor="name" className="font-bold">Name:</label>
-          <input type="text" id="name" name="name" className="border-2 border-gray-300 p-2 rounded-md" />
+          <input type="text" id="name" name="name" className="text-black border-2 border-gray-300 p-2 rounded-md" />
           
           <label htmlFor="description" className="font-bold">Description:</label>
-          <input type="text" id="description" name="description" className="border-2 border-gray-300 p-2 rounded-md" />
+          <input type="text" id="description" name="description" className="border-2 border-gray-300 text-black p-2 rounded-md" />
           
           <input type="file" id="image" name="image" className="border-2 border-gray-300 p-2 rounded-md" />
           <label htmlFor='image' className="font-bold">Upload Image</label>
