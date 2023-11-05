@@ -71,15 +71,16 @@ export default function Home() {
           <button className='bg-green-500 text-white font-bold py-2 px-4 rounded' onClick={handleBookSpaceClick}>
             Book your space
           </button>
-          <button className='bg-red-500 text-white font-bold py-2 px-4 rounded' onClick={handleClearSpaces}>
+          <button className='bg-grey-500 text-white font-bold py-2 px-4 rounded' onClick={handleClearSpaces}>
             Clear spaces
           </button>
           <UserButton afterSignOutUrl="/"/>
         </div>
       </div>
 
-      <header className="container mx-auto text-center mt-10 bg-cover bg-center" style={{backgroundImage: "url('/fotor-ai.jpg')"}}>
-        <div className="bg-gray-800 bg-opacity-50 text-white p-10 rounded">
+      <header className="flex mt-10">
+        <div className="w-1/2 bg-cover bg-center" style={{backgroundImage: "url('/fotor-ai.jpg')"}}></div>
+        <div className="w-1/2 bg-gray-800 text-white p-10">
           <p className="max-w-4xl text-2xl md:text-3xl lg:text-4xl text-gray-700 mt-2 mx-auto">Connecting <span className='text-blue-600'>creatives</span> with affordable and inspirational spaces to work and create</p>
         </div>
       </header>
