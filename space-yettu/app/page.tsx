@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect } from 'react';
 import { UserButton } from "@clerk/nextjs";
 
@@ -62,29 +63,30 @@ export default function Home() {
 
   return (
     <main className="bg-gray-100 min-h-screen p-6">
+      <header className="bg-white text-zinc-900 py-4 border-b">
+      <nav className="flex items-center justify-between">
       <div className="flex justify-between items-center w-full">
-        <h1 className="text-4xl font-bold text-blue-600">Space Yettu</h1>
+        <h1 className="text-2xl font-bold text-blue-600">Space Yettu</h1>
         <div className="flex space-x-4">
-          <button className='bg-blue-500 text-white font-bold py-2 px-4 rounded' onClick={handleListSpaceClick}>
+          <button className='text-zinc-900 hover:text-zinc-700 bg-blue-500 text-white font-bold py-2 px-4 rounded' onClick={handleListSpaceClick}>
             + List your space
           </button>
-          <button className='bg-green-500 text-white font-bold py-2 px-4 rounded' onClick={handleBookSpaceClick}>
+          <button className=' text-zinc-900 hover:text-zinc-700 bg-green-500 text-white font-bold py-2 px-4 rounded' onClick={handleBookSpaceClick}>
             Book your space
           </button>
           <button className='bg-grey-500 text-white font-bold py-2 px-4 rounded' onClick={handleClearSpaces}>
             Clear spaces
           </button>
+          <button className='bg-grey-500 text-white font-bold py-2 px-4 rounded'>
           <UserButton afterSignOutUrl="/"/>
+          </button>
         </div>
       </div>
-
-      <header className="flex mt-10">
-        <div className="w-1/2 bg-cover bg-center" style={{backgroundImage: "url('/fotor-ai.jpg')"}}></div>
-        <div className="w-1/2 bg-gray-800 text-white p-10">
-          <p className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Connecting <span className='text-blue-600'>creatives</span> with spaces to work and create</p>
-        </div>
+      
+      </nav>
       </header>
-
+    
+     
       {showForm && (
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4 mt-10">
         <label htmlFor="name" className="font-bold">Name:</label>
@@ -118,8 +120,29 @@ export default function Home() {
               <p className="text-gray-700 mt-2">{space.description}</p>
             </div>
           </div>
+
         ))}
-      </div>
+        
+          <div className=" bg-gray-800 text-white p-10">
+          <p className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Discover <span className='text-blue-600'>creative</span> unique spaces to work</p>
+          
+        </div>
+          <div>
+            <div className="md:w-full">
+              <img
+                alt="creative"
+                className="h-full md:h-96 object-cover object-center rounded-lg scale-100 shadow-md"
+                
+                src="/fotor-ai.jpg"
+                
+               
+              />
+            </div>
+            
+            </div>
+          </div>
+       
+   
     </main>
   );
 }
