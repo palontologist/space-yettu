@@ -124,8 +124,11 @@ export default function Home() {
         ))}
         
           <div className=" bg-gray-800 text-white p-10">
-          <p className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Discover <span className='text-blue-600'>creative</span> unique spaces to work</p>
-          
+          <p className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">Discover <span className='text-blue-600'>creative</span> unique spaces</p>
+          <p className="max-w-[500px] text-zinc-200 md:text-xl dark:text-zinc-100 mx-auto">
+          Discover the perfect workspace to bring your ideas to life.
+              </p>
+
         </div>
           <div>
             <div className="md:w-full">
